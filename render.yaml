@@ -2,6 +2,7 @@ services:
   - type: web
     name: openclaw
     runtime: docker
+    dockerCommand: openclaw gateway --bind lan --port 8080 --allow-unconfigured
     plan: starter
     healthCheckPath: /health
     envVars:
